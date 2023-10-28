@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Recomendaciones</title>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <h2 class="logotipo">Recomendaciones</h2>
+            <nav>
+                <a href="#" class="activo">Inicio</a>
+                <a href="#">Películas</a>
+                <a href="#">Series</a>
+                <a href="#">Más Recientes</a>
+                <a href="#">Mi lista</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <br>
+        <div class="container">
+            <h2 class="font-weight-bold mb-1">
+                <p style="font-family:Tahoma">Recomendaciones de películas</p>
+            </h2>
+            <p style="font-style: italic;"><br>¡Aquí tienes algunas sugerencias para ti!</p>
+        </div>
+
+        <div class="container py-5">
+            <div class="row pb-5 mb-4">
+                {% for movie in output %}
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <!-- Card-->
+                    <div class="card rounded shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <h5>{{ movie['name'] }}</h5>
+                            <p>Genre: {{ movie['genre'] }}</p>
+                            <p>Tagline: {{ movie['tagline'] }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
