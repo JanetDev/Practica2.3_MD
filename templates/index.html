@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Teletubbies</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=10, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../static/estilos.css">
+</head>
+
+<body>
+	<header>
+		<div class="contenedor">
+			<h2 class="logotipo">Teletubbies</h2>
+			<nav>
+				<a href="#" class="activo">Inicio</a>
+				<a href="#">Programas</a>
+				<a href="#">Películas</a>
+				<a href="#">Más Recientes</a>
+				<a href="#">Mi lista</a>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<br>
+		<div class="container">
+			<h2 class="font-weight-bold mb-1">
+				<p style="font-family:Tahoma">Sistema Recomendador de peliculas
+			</h2>
+			<p style="font-style: italic;"><br>Busque una palabra clave y le mostraremos lo que tenemos en catalogo.</p>
+			<form action="/" method="POST">
+				<div class="form-group">
+					<label for="search">Buscar Pelicula:<br></label>
+					<input type="string" step="1" class="form-control" placeholder="Ex: Iron man, Avatar" id="search"
+						name="search" required><br>
+					<div class="button-group" style="margin-top:15px;">
+						<button type="submit" name="submit" class="btn btn-danger"><br>Buscar</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<div class="container">
+			<div class="text-center"><br>
+			  <img src="static/home.gif" class="img-fluid" alt="Responsive image" width="450px">
+			</div>
+		</div>
+	</main>
+</body>
+
+</html>
